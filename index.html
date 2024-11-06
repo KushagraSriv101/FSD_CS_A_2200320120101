@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dashboard</title>
   <style>
-    /* General layout styling */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -13,8 +12,6 @@
       flex-direction: column;
       height: 100vh;
     }
-
-    /* Styling for the top header */
     header {
       background-color: #ff4444;
       color: #fff;
@@ -23,21 +20,18 @@
       font-size: 1.5em;
     }
 
-    /* Container to hold sidebar and main content */
     .container {
       display: flex;
       flex: 1;
     }
 
-    /* Sidebar styling */
     .sidebar {
       background-color: #c6c6c6;
       width: 200px;
       padding: 20px;
       box-sizing: border-box;
     }
-
-    /* Sidebar links styling */
+    
     .sidebar a {
       display: block;
       padding: 10px;
@@ -47,12 +41,10 @@
       font-weight: bold;
     }
 
-    /* Link hover effect for sidebar */
     .sidebar a:hover {
       background-color: #ddd;
     }
 
-    /* Styling for main content area and iframe */
     .main-content {
       flex: 1;
       box-sizing: border-box;
@@ -64,7 +56,7 @@
       border: none;
     }
 
-    /* Footer styling */
+
     footer {
       background-color: #333;
       color: #fff;
@@ -74,32 +66,22 @@
   </style>
 </head>
 <body>
-
-  <!-- Header section -->
   <header>
     Currency Converter Dashboard
   </header>
-
-  <!-- Main layout with sidebar and content area -->
   <div class="container">
-    <!-- Sidebar with navigation links -->
     <nav class="sidebar">
       <a href="#" onclick="loadPage('test.html')">Currency Converter</a>
     </nav>
-
-    <!-- Content area where other pages will load -->
     <div class="main-content">
       <iframe id="contentFrame" src=""></iframe>
     </div>
   </div>
-
-  <!-- Footer section -->
   <footer>
     &copy; 2024 Currency Converter Application
   </footer>
 
   <script>
-    // Simple function to load the selected page into the iframe
     function loadPage(url) {
       document.getElementById('contentFrame').src = url;
     }
